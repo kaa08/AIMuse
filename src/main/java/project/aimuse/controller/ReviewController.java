@@ -27,7 +27,7 @@ public class ReviewController {
 
     private final ReviewService reviewService;
 
-    //커뮤니티 게시물 목록 조회
+    //후기글 목록 조회
     @GetMapping("/list")
     public ResponseEntity<Page<ResReviewListDto>> getAllReviews(
             @PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
@@ -35,7 +35,7 @@ public class ReviewController {
         return ResponseEntity.status(HttpStatus.OK).body(listDto);
     }
 
-    //커뮤니티 게시물 검색
+    //후기글 검색
     @GetMapping("/search")
     public ResponseEntity<Page<ResReviewListDto>> search(
             @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
@@ -47,14 +47,14 @@ public class ReviewController {
         return  ResponseEntity.status(HttpStatus.OK).body(searchBoard);
     }
 
-    //커뮤니티 게시글 조회
+    //후기글 조회
     @GetMapping("/{reviewId}")
     public ResponseEntity<ResReviewDetailsDto> details(@PathVariable Long reviewId) {
         ResReviewDetailsDto dto = reviewService.detail(reviewId);
         return ResponseEntity.status(HttpStatus.OK).body(dto);
     }
 
-    //커뮤니티 게시글 작성
+    //후기글 작성
     @PostMapping("/write")
     public ResponseEntity<ResReviewWriteDto> write(
             @RequestBody ReviewWriteDto writeDto,
@@ -66,7 +66,7 @@ public class ReviewController {
         return ResponseEntity.status(HttpStatus.CREATED).body(dto);
     }
 
-    //커뮤니티 게시글 업데이트
+    //후기글 업데이트
     @PatchMapping("/{reviewId}/update")
     public ResponseEntity<ResReviewDetailsDto> update(
             @PathVariable Long reviewId,
@@ -76,6 +76,7 @@ public class ReviewController {
         return ResponseEntity.status(HttpStatus.OK).body(dto);
     }
 
+    //후기글 삭제
     @DeleteMapping("/{reviewID}")
     public ResponseEntity<Long> delete(@PathVariable Long reviewID) {
         reviewService.delete(reviewID);

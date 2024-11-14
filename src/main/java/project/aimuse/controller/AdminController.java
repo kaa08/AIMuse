@@ -20,6 +20,7 @@ import project.aimuse.dto.response.member.MemberResponseDto;
 import project.aimuse.dto.response.notice.ResNoticeDetailsDto;
 import project.aimuse.dto.response.notice.ResNoticeListDto;
 import project.aimuse.dto.response.notice.ResNoticeWriteDto;
+import project.aimuse.dto.response.review.ResReviewListDto;
 import project.aimuse.entity.Member;
 import project.aimuse.service.*;
 
@@ -33,6 +34,7 @@ public class AdminController {
     private final BoardService boardService;
     private final InquiryService inquiryService;
     private final NoticeService noticeService;
+    private final ReviewService reviewService;
     private final CommentService commentService;
 
     // 관리자 페이지 - 전체 사용자 조회
@@ -70,6 +72,21 @@ public class AdminController {
             @PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
         Page<ResInquiryListDto> list = inquiryService.getAllInquiries(pageable);
         return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    // 관리자 페이지 - 후기 게시판 조회
+    @GetMapping("/review/list")
+    public ResponseEntity<Page<ResReviewListDto>> reviewList(
+            @PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+        Page<ResReviewListDto> list = reviewService.getAllReviews(pageable);
+        return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    // 관리자 페이지 - 후기 글 삭제
+    @DeleteMapping("/review/list/{id}")
+    public ResponseEntity<ResReviewListDto> deleteReview(@PathVariable Long id) {
+        reviewService.delete(id);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     // 관리자 페이지 - 문의사항 답변

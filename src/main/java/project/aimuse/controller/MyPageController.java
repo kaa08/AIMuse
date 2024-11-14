@@ -17,6 +17,7 @@ import project.aimuse.dto.response.comment.ResCommentDto;
 import project.aimuse.dto.response.inquiry.ResInquiryListDto;
 import project.aimuse.dto.response.member.MemberResponseDto;
 import project.aimuse.dto.response.music.ResMusicListDto;
+import project.aimuse.dto.response.review.ResReviewListDto;
 import project.aimuse.entity.Member;
 import project.aimuse.service.*;
 
@@ -31,6 +32,7 @@ public class MyPageController {
     private final InquiryService inquiryService;
     private final MemberService memberService;
     private final MusicService musicService;
+    private final ReviewService reviewService;
 
     // 마이페이지 - 사용자가 쓴 커뮤니티 게시글 전체 조회, 페이징 처리
     @GetMapping("/board/list")
@@ -58,6 +60,16 @@ public class MyPageController {
             @AuthenticationPrincipal Member member
     ) {
         Page<ResInquiryListDto> list = inquiryService.getAllInquiriesByMember(pageable, member);
+        return ResponseEntity.status(HttpStatus.OK).body(list);
+    }
+
+    // 마이페이지 - 사용자가 쓴 리뷰 글 전체 조회, 페이징 처리
+    @GetMapping("/review/list")
+    public ResponseEntity<Page<ResReviewListDto>> reviewList(
+            @PageableDefault(size = 10, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
+            @AuthenticationPrincipal Member member
+    ) {
+        Page<ResReviewListDto> list = reviewService.getAllReviewsByMember(pageable, member);
         return ResponseEntity.status(HttpStatus.OK).body(list);
     }
 
@@ -104,6 +116,12 @@ public class MyPageController {
     @DeleteMapping("/inquiry/list/{inquiryId}")
     public ResponseEntity<Long> deleteInquiry(@PathVariable Long inquiryId) {
         inquiryService.delete(inquiryId);
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
+
+    @DeleteMapping("/review/list/{reviewId}")
+    public ResponseEntity<Long> deleteReview(@PathVariable Long reviewId) {
+        reviewService.delete(reviewId);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 

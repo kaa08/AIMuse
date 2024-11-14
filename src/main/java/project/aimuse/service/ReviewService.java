@@ -92,7 +92,7 @@ public class ReviewService {
         reviewRepository.deleteById(reviewId);
     }
     // 마이페이지 - 사용자별 커뮤니티 게시글 조회
-    public Page<ResReviewListDto> getAllBoardsByMember(Pageable pageable, Member member) {
+    public Page<ResReviewListDto> getAllReviewsByMember(Pageable pageable, Member member) {
         Page<Review> reviews = reviewRepository.findAllByMember(pageable, member);
         List<ResReviewListDto> list = reviews.getContent().stream()
                 .map(ResReviewListDto::fromEntity)

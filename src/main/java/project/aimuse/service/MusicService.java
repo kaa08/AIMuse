@@ -257,8 +257,8 @@ public class MusicService {
             sourceMusicFilePath = sourceDirectory + "/Music-Transformer-Composition_G.wav";
             sourceImageFilePath = sourceDirectory + "/Music-Transformer-Composition_G.png";
         } else {
-            throw new IllegalArgumentException("Invalid chordwork: no matching file for the given chord.");
-        }
+            sourceMusicFilePath = sourceDirectory + "/Music-Transformer-Composition_G.wav";
+            sourceImageFilePath = sourceDirectory + "/Music-Transformer-Composition_G.png";        }
 
         // UUID를 사용하여 새 파일 이름 생성
         String randomFileName = UUID.randomUUID().toString();
