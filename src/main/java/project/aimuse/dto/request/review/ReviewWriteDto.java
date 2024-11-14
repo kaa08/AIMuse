@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import project.aimuse.entity.Board;
+import project.aimuse.entity.Review;
 
 @Getter
 @Setter
@@ -20,8 +20,8 @@ public class ReviewWriteDto {
     }
 
 
-    public static Board ofEntity(ReviewWriteDto dto) {
-        return Board.builder()
+    public static Review ofEntity(ReviewWriteDto dto) {
+        return Review.builder()
                 .title(dto.getTitle())
                 .content(dto.getContent())
                 .build();

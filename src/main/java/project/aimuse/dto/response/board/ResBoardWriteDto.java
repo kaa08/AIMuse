@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import project.aimuse.entity.Board;
+import project.aimuse.entity.Review;
 
 @Getter
 @Setter
