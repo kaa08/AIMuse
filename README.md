@@ -1,5 +1,5 @@
-# AIMuse Graduation Project Backend Part
 # 졸업 프로젝트
+- AIMuse 프로젝트 BE
 - 간단한 설명(아이템 핵심 기능 및 상세 역할)
 - 제작기간: 2024.09 ~ 2024.12 (3개월)
 - 참여인원: BE: 1 명, FE: 1 명, AI: 2 명 
