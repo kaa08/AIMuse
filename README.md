@@ -21,7 +21,7 @@
 
 | 구분 | 기술 |
 |------|------|
-| **Frontend** | React, HTML/CSS/JS, Next.js |
+| **Frontend** | React, HTML/CSS/JS|
 | **Backend** | Spring Boot, JPA, Spring Security |
 | **AI 연동 방식** | ProcessBuilder (Spring → Python 스크립트 직접 실행) |
 | **AI 모델** | Music Transformer |
@@ -34,8 +34,6 @@
 ## 사용 모델
 
 - **Music Transformer**: 키워드 및 감정을 기반으로 음악 생성
-- **FFmpeg 및 Python 로직**: 음악 길이 편집 및 음원 포맷 변환
-- **이미지 자동 생성**: 음악 분위기에 맞는 썸네일 자동 생성
 
 ---
 
