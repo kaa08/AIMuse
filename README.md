@@ -105,6 +105,7 @@
 
 ## 시연 동영상
 
+https://github.com/user-attachments/assets/d0879cd6-c7cf-4cb4-83c7-b7c11c006016
 
 ---
 
