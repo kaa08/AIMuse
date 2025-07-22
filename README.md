@@ -2,14 +2,15 @@
 
 > **프로젝트명**: AIMuse  
 > **기간**: 2024년 9월 ~ 12월  
-> **참여인원**: 4명  
+> **참여인원**: 4명(백엔드 1명, 프론트엔드 1명,AI 2명) <br>
 > **담당 역할**: 백엔드 개발 및 AI 모델 연동  
 <br>
 
 ---
 
 ## 전체적인 프로젝트 소개
-<img width="1483" height="755" alt="image" src="https://github.com/user-attachments/assets/77cffb50-a970-4200-a656-728400d7211d" />
+
+<img width="1207" height="622" alt="스크린샷 2025-07-22 오후 9 22 07" src="https://github.com/user-attachments/assets/955b6c11-6b14-4d30-b249-425d3ca4e1cb" />
 
 - Music Transformer 모델을 활용하여 **쇼츠 맞춤용 BGM 생성**하는 웹 기반 서비스  
 - 사용자의 감정 및 키워드를 기반으로 AI가 음악을 자동 생성하고 영상 및 코드워크 이미지 생성
