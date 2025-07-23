@@ -41,11 +41,11 @@
 ## AI 서비스 시나리오
 <img width="1310" height="585" alt="image" src="https://github.com/user-attachments/assets/7c2021f7-f4c2-46a5-bde5-320f46eef8a7" />
 
-1-1. 사용자가 분위기, 악기, 음악 길이 및 BPM을 체크박스를 통해 입력(초보자용) 完
-1-2. 사용자가 A, A#, B, D 등과 같은 코드워크, 악기, 길이 및 BPM을 체크박스를 입력(전문가용) 未完
-2. Spring Boot 서버에서 Python 기반 Music Transformer 모델을 직접 실행 (ProcessBuilder 활용)
-3. 생성된 음악(wav)과 코드워크 이미지 파일 생성 및 DB에 저장
-4. 결과 파일을 React 프론트에 반환하여 시각화 및 다운로드 기능 제공
+1-1. 사용자가 분위기, 악기, 음악 길이 및 BPM을 체크박스를 통해 입력(초보자용) 完 <br>
+1-2. 사용자가 A, A#, B, D 등과 같은 코드워크, 악기, 길이 및 BPM을 체크박스를 입력(전문가용) 未完 <br>
+2. Spring Boot 서버에서 Python 기반 Music Transformer 모델을 직접 실행 (ProcessBuilder 활용) <br>
+3. 생성된 음악(wav)과 코드워크 이미지 파일 생성 및 DB에 저장 <br>
+4. 결과 파일을 React 프론트에 반환하여 시각화 및 다운로드 기능 제공 <br>
 
 ---
 
