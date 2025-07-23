@@ -117,4 +117,4 @@ https://github.com/user-attachments/assets/d0879cd6-c7cf-4cb4-83c7-b7c11c006016
 | AI 모델 개발 및 PM(팀장) | 이동원 | - |
 | AI 모델 및 데이터 전처리 | 전우혁 | - |
 | 백엔드 & AI 연동 👋 | 가한솔 | https://github.com/kaa08 |
-| AI 모델 및 데이터 전처리 | 전우혁 | - |
+| 프론트엔드 & 디자인 | 최우창 | - |
